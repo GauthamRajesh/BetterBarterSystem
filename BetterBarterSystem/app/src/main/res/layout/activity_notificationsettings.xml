@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.NotificationSettingsActivity"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:layout_margin="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/q1_notif"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-light" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="15dp">
+
+        <RadioButton android:id="@+id/perHr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/perHour_text"
+            android:fontFamily="sans-serif-light"
+            android:onClick="onSelected" />
+
+        <RadioButton android:id="@+id/perDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/perDay_text"
+            android:fontFamily="sans-serif-light"
+            android:onClick="onSelected" />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_margin="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/q2_notif"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-light" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="15dp">
+
+        <RadioButton android:id="@+id/complex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/complex_text"
+            android:fontFamily="sans-serif-light"
+            android:onClick="onSelected" />
+
+        <RadioButton android:id="@+id/simple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/simple_text"
+            android:fontFamily="sans-serif-light"
+            android:onClick="onSelected" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="@string/save_text" />
+
+</LinearLayout>

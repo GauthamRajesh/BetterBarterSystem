@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gaucow.betterbartersystem"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name_real"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BetterBarterSystem"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".activities.SignIn">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.MainActivity"
+            android:label="@string/title_activity_main" />
+        <activity
+            android:name=".activities.BuySellListActivity"
+            android:parentActivityName=".activities.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gaucow.betterbartersystem.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activities.ViewMyBooksActivity"
+            android:parentActivityName=".activities.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gaucow.betterbartersystem.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activities.ViewAllBooksActivity"
+            android:parentActivityName=".activities.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gaucow.betterbartersystem.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activities.ViewBookDetailActivity"
+            android:parentActivityName=".activities.ViewAllBooksActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gaucow.betterbartersystem.activities.ViewAllBooksActivity" />
+        </activity>
+        <activity
+            android:name=".activities.ViewSellersActivity"
+            android:parentActivityName=".activities.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gaucow.betterbartersystem.activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activities.ViewSellerDetailActivity"
+            android:parentActivityName=".activities.ViewSellersActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.ViewSellersActivity" />
+        </activity>
+        <activity
+            android:name=".activities.NotificationSettingsActivity"
+            android:parentActivityName=".activities.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activities.UserGuideDetailActivity"
+            android:parentActivityName=".activities.UserGuideActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.UserGuideActivity" />
+        </activity>
+
+        <service
+            android:name=".services.TradeService"
+            android:exported="false" />
+
+        <receiver
+            android:name=".services.TradeReceiver"
+            android:exported="false"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.gaucow.betterbartersystem.action.TRADE_ACTION" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".services.TradeBootReceiver"
+            android:enabled="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".activities.TradeDetailsActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:taskAffinity="" />
+        <activity android:name=".activities.UserGuideActivity"
+            android:parentActivityName=".activities.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>

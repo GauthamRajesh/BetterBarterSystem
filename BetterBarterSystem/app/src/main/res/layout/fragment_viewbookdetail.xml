@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/titleOffering"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Title of Book Offering: title"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginBottom="15dp" />
+
+    <TextView
+        android:id="@+id/authorOffering"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Author of Book Offering: author"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginBottom="15dp" />
+
+    <TextView
+        android:id="@+id/titleWanted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Titles of Books Wanted: titles"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginBottom="15dp" />
+
+    <TextView
+        android:id="@+id/authorWanted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Authors of Books Wanted: authors"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginBottom="15dp" />
+
+    <Button
+        android:id="@+id/contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/contact_label"/>
+
+</LinearLayout>

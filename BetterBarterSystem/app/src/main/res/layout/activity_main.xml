@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="15dp">
+
+        <Button
+            android:id="@+id/viewmybooks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/view_my_books"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/createlist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/createlist_text" />
+
+        <Button
+            android:id="@+id/viewbooks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/view_all_books" />
+
+        <Button
+            android:id="@+id/notificationSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notifsettings_text"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/showSellers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/showsellers_label"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/startTradeSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/startsearch_text"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tradeServiceRunning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/traderuning_text"
+            android:layout_marginTop="15dp"
+            android:fontFamily="sans-serif-light"
+            android:textSize="20sp"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/userGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/userguide_label" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/donation_text"
+            android:fontFamily="sans-serif-light"
+            android:textSize="25sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
